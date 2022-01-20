@@ -39,7 +39,7 @@ function formatMiliseconds(number: number, digits: number) {
  */
 export function formatTime(totalMilliseconds: number) {
   if (totalMilliseconds == undefined) {
-    return "00:00.00";
+    return "00:00.000";
   }
 
   var hours = Math.floor(totalMilliseconds / 1000 / 60 / 60);
@@ -53,6 +53,6 @@ export function formatTime(totalMilliseconds: number) {
     ":" +
     prependZeros(seconds, 2) +
     "." +
-    formatMiliseconds(milliseconds, 2)
+    formatMiliseconds(milliseconds, 3)
   );
 }
